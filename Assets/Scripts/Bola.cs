@@ -5,10 +5,13 @@ using UnityEngine;
 public class Bola : MonoBehaviour{
 
     public Vector2 velocidade;
+    public float rotationSpeed = 50f;
 
     // Start is called before the first frame update
     void Start(){
         Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
         rb2d.AddForce(velocidade);
+        GetComponent<Rigidbody2D>().angularVelocity = rotationSpeed;
+
     }
 }
